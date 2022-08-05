@@ -1,0 +1,9 @@
+@layer base {
+  body {
+    @apply flex flex-col h-full min-h-screen antialiased;
+  }
+
+  main {
+    @apply flex flex-col flex-grow;
+  }
+}
