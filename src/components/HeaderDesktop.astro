@@ -1,0 +1,63 @@
+---
+import clsx from 'clsx';
+
+const containerClasses = clsx(
+  'hidden container items-center justify-between py-12 mx-auto max-w-7xl',
+  'md:flex'
+);
+
+const navLinkClasses = clsx(
+  'nav-link',
+  'text-2xl text-gray-400 font-bold',
+  'transition',
+  'hover:text-gray-200',
+  'active:text-gray-200'
+);
+---
+
+<div class={containerClasses}>
+  <div>
+    <a href="/">
+      <img src="images/logo.svg" alt="Zack Jackson logo - a square with a 'Z' in it" />
+    </a>
+  </div>
+  <nav>
+    <ul class="flex items-center">
+      <li class="nav-item">
+        <a href="#" class={navLinkClasses}>About</a>
+      </li>
+      <li class="nav-item ml-12">
+        <a href="#" class={navLinkClasses}>Work</a>
+      </li>
+      <li class="nav-item ml-12">
+        <a href="#" class={navLinkClasses}>Contact</a>
+      </li>
+      <li class="nav-item ml-12">
+        <a href="#" class={navLinkClasses}>Resume</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<style>
+  .nav-link {
+    position: relative;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: calc(50% - 4px);
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: transparent;
+    border-radius: 100%;
+    transition: background-color 150ms ease-in-out;
+  }
+
+  .nav-link:hover::after {
+    background-color: rgb(var(--primary));
+  }
+</style>

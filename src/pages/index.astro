@@ -1,4 +1,6 @@
 ---
+import HeaderDesktop from '../components/HeaderDesktop.astro';
+import HeaderMobile from '../components/HeaderMobile.astro';
 import '../styles/global.css'
 const siteTitle = "Zack Jackson";
 ---
@@ -18,7 +20,9 @@ const siteTitle = "Zack Jackson";
 </head>
 
 <body>
-	<main>
+	<HeaderDesktop />
+	<HeaderMobile />
+	<main class="container mx-auto max-w-7xl">
 		<h1>Welcome to Astro</h1>
 	</main>
 </body>
