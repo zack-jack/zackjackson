@@ -1,0 +1,8 @@
+@layer base {
+  body {
+    @apply flex flex-col;
+    @apply h-full min-h-screen;
+    @apply bg-gray-900;
+    @apply antialiased text-gray-200;
+  }
+}

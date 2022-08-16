@@ -1,0 +1,5 @@
+@layer base {
+  main {
+    @apply flex flex-col flex-grow;
+  }
+}

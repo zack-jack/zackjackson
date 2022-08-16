@@ -2,7 +2,7 @@
 import clsx from 'clsx';
 
 const containerClasses = clsx(
-  'hidden container items-center justify-between py-12 mx-auto max-w-7xl',
+  'hidden items-center justify-between py-12',
   'md:flex'
 );
 
@@ -38,26 +38,3 @@ const navLinkClasses = clsx(
     </ul>
   </nav>
 </div>
-
-<style>
-  .nav-link {
-    position: relative;
-  }
-
-  .nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: -12px;
-    left: calc(50% - 4px);
-    display: block;
-    width: 8px;
-    height: 8px;
-    background-color: transparent;
-    border-radius: 100%;
-    transition: background-color 150ms ease-in-out;
-  }
-
-  .nav-link:hover::after {
-    background-color: rgb(var(--primary));
-  }
-</style>

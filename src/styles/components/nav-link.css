@@ -1,0 +1,22 @@
+@layer components {
+  .nav-link {
+    position: relative;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: calc(50% - 4px);
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: transparent;
+    border-radius: 100%;
+    transition: background-color 150ms ease-in-out;
+  }
+
+  .nav-link:hover::after {
+    background-color: rgb(var(--primary));
+  }
+}

@@ -1,30 +1,8 @@
 ---
-import HeaderDesktop from '../components/HeaderDesktop.astro';
-import HeaderMobile from '../components/HeaderMobile.astro';
-import '../styles/global.css'
-const siteTitle = "Zack Jackson";
+import MainLayout from "../layouts/MainLayout.astro";
+
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width" />
-	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-	<title>{siteTitle}</title>
-	<meta name="theme-color" content="#000000" />
-</head>
-
-<body>
-	<HeaderDesktop />
-	<HeaderMobile />
-	<main class="container mx-auto max-w-7xl">
-		<h1>Welcome to Astro</h1>
-	</main>
-</body>
-
-</html>
+<MainLayout>
+	<h1>Welcome to Astro</h1>
+</MainLayout>
