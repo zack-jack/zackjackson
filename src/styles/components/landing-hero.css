@@ -1,0 +1,6 @@
+@layer components {
+  .landing-hero {
+    @apply relative flex flex-col py-32 px-16;
+    min-height: calc(100vh - 160px);
+  }
+}

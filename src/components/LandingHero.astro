@@ -1,0 +1,46 @@
+---
+import SectionKicker from "./SectionKicker.astro";
+import SocialIconLinks from "./SocialIconLinks.astro";
+---
+
+<section id="introduction" class="landing-hero">
+  <div class="flex items-center gap-48">
+    <header class="flex-1">
+      <h1 class="text-7xl font-bold leading-tight tracking-wide">
+        Zack<br /> Jackson.
+      </h1>
+      <span aria-hidden="true" class="block h-2 w-10 bg-primary mt-2"></span>
+    </header>
+    <div class="flex-1">
+      <SectionKicker />
+      <h2 class="text-2xl font-bold leading-normal mt-4">
+        Software Developer<br /> based in Charlotte, NC
+      </h2>
+      <p class="text-gray-400 mt-4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+        nulla arcu, lacinia eu tempor sit amet, accumsan non felis.
+      </p>
+    </div>
+  </div>
+  <div class="mt-6">
+    <SocialIconLinks />
+  </div>
+  <div class="absolute bottom-10 flex justify-center w-full">
+    <a href="#about" class="link flex flex-col items-center">
+      <span class="leading-none">Scroll for more</span>
+      <span aria-hidden="true" class="mt-2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5 fill-gray-400"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M16.707 10.293a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l4.293-4.293a1 1 0 011.414 0z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </span>
+    </a>
+  </div>
+</section>

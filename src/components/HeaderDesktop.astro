@@ -1,39 +1,31 @@
 ---
-import clsx from 'clsx';
+import cn from 'classnames';
 
-const containerClasses = clsx(
-  'hidden items-center justify-between py-12',
+const containerClasses = cn(
+  'hidden items-center justify-between py-12 bg-gray-900',
   'md:flex'
-);
-
-const navLinkClasses = clsx(
-  'nav-link',
-  'text-2xl text-gray-400 font-bold',
-  'transition',
-  'hover:text-gray-200',
-  'active:text-gray-200'
 );
 ---
 
 <div class={containerClasses}>
   <div>
     <a href="/">
-      <img src="images/logo.svg" alt="Zack Jackson logo - a square with a 'Z' in it" />
+      <img src="images/_logo-zack-jackson.svg" alt="Zack Jackson logo - a square with a 'Z' in it" />
     </a>
   </div>
   <nav>
     <ul class="flex items-center">
-      <li class="nav-item">
-        <a href="#" class={navLinkClasses}>About</a>
+      <li>
+        <a href="#about" class="nav-link">About</a>
       </li>
-      <li class="nav-item ml-12">
-        <a href="#" class={navLinkClasses}>Work</a>
+      <li class="ml-12">
+        <a href="#work" class="nav-link">Work</a>
       </li>
-      <li class="nav-item ml-12">
-        <a href="#" class={navLinkClasses}>Contact</a>
+      <li class="ml-12">
+        <a href="#contact" class="nav-link">Contact</a>
       </li>
-      <li class="nav-item ml-12">
-        <a href="#" class={navLinkClasses}>Resume</a>
+      <li class="ml-12">
+        <a href="#" class="nav-link">Resume</a>
       </li>
     </ul>
   </nav>
