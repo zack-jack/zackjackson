@@ -1,4 +1,6 @@
 ---
+import Container from "../components/Container.astro";
+import LandingAbout from "../components/LandingAbout.astro";
 import LandingHero from "../components/LandingHero.astro";
 import NavLayout from "../layouts/NavLayout.astro";
 
@@ -8,5 +10,8 @@ if (import.meta.env.PROD) {
 ---
 
 <NavLayout>
-	<LandingHero />
+	<Container>
+		<LandingHero />
+	</Container>
+	<LandingAbout />
 </NavLayout>

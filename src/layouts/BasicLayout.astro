@@ -1,18 +1,13 @@
 ---
-import cn from "classnames";
+import Container from "../components/Container.astro";
 
 import "../styles/global.css";
 
 const siteTitle = "Zack Jackson | Software Developer";
-const appContainerClasses = cn(
-  "relative",
-  "flex flex-col flex-grow",
-  "container mx-auto max-w-7xl"
-);
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -32,11 +27,13 @@ const appContainerClasses = cn(
   </head>
 
   <body>
-    <div id="app" class={appContainerClasses}>
-      <a href="#main" class="skip-link"> Skip to content</a>
-      <main id="main" class="flex items-center justify-center">
-        <slot />
-      </main>
+    <div id="app" class="relative flex flex-col flex-grow">
+      <a href="#main" class="skip-link">Skip to content</a>
+      <Container containerClassName="flex flex-col flex-grow">
+        <main id="main" class="flex flex-col items-center justify-center">
+          <slot />
+        </main>
+      </Container>
     </div>
   </body>
 </html>
