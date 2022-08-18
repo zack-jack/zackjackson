@@ -1,0 +1,42 @@
+---
+import cn from "classnames";
+
+import "../styles/global.css";
+
+const siteTitle = "Zack Jackson | Software Developer";
+const appContainerClasses = cn(
+  "relative",
+  "flex flex-col flex-grow",
+  "container mx-auto max-w-7xl"
+);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Zack Jackson is a software developer based in Charlotte, NC. He is passionate about bringing design to life with delightful user experiences."
+    />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>{siteTitle}</title>
+  </head>
+
+  <body>
+    <div id="app" class={appContainerClasses}>
+      <a href="#main" class="skip-link"> Skip to content</a>
+      <main id="main" class="flex items-center justify-center">
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>
