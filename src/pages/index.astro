@@ -2,6 +2,9 @@
 import LandingHero from "../components/LandingHero.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 
+if (import.meta.env.PROD) {
+	return Astro.redirect("/work-in-progress");
+}
 ---
 
 <MainLayout>
