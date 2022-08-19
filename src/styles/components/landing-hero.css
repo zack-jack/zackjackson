@@ -1,6 +1,6 @@
 @layer components {
   .landing-hero {
-    @apply relative flex flex-col justify-center pt-6 pb-32 px-16;
+    @apply relative flex flex-col justify-center px-16 pt-6 pb-32;
     min-height: calc(100vh - 160px);
   }
 }

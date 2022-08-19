@@ -1,5 +1,5 @@
 @layer components {
   .section-kicker {
-    @apply flex items-center text-lg text-gray-400 uppercase tracking-widest font-primary;
+    @apply flex items-center text-lg tracking-widest text-gray-400 uppercase font-primary;
   }
 }

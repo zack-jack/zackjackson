@@ -19,10 +19,10 @@ const { title, variant = "default" } = Astro.props as Props;
     <div class="flex justify-center">
       <slot name="icon" />
     </div>
-    <p class="card-title mt-12">
+    <p class="mt-12 card-title">
       <Fragment set:html={title} />
     </p>
-    <p class="card-copy mt-8">
+    <p class="mt-8 card-copy">
       <slot />
     </p>
   </div>

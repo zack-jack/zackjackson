@@ -1,5 +1,5 @@
 @layer components {
   .link {
-    @apply font-primary font-bold text-gray-400;
+    @apply font-bold text-gray-400 font-primary;
   }
 }

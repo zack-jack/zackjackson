@@ -1,0 +1,30 @@
+---
+import cn from "classnames";
+
+import TimelineItem from "./TimelineItem.astro";
+
+interface Props {
+  customClass?: string;
+}
+
+const { customClass } = Astro.props as Props;
+---
+
+<div
+  class={cn("relative flex flex-col items-center", {
+    [customClass]: !!customClass,
+  })}
+>
+  <div
+    aria-hidden="true"
+    class="absolute bottom-0 block w-1 h-full bg-gray-500 top-1"
+  >
+  </div>
+  <div class="z-10 flex flex-col w-full gap-40">
+    <TimelineItem date="Nov 2018" label="Developer journey begins" />
+    <TimelineItem date="Apr 2019" label="Red Ventures + MYMOVE" />
+    <TimelineItem date="Feb 2020" label="USPS + MYMOVE" />
+    <TimelineItem date="Nov 2021" label="Allconnect" />
+    <TimelineItem date="June 2022" label="15Five" />
+  </div>
+</div>

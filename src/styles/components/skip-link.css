@@ -1,7 +1,7 @@
 @layer components {
   .skip-link {
     @apply absolute px-4 py-2 bg-gray-100;
-    @apply text-gray-900 text-lg font-bold;
+    @apply text-lg font-bold text-gray-900;
     @apply z-50;
     @apply transition duration-150 ease-in-out;
     transform: translateY(-120%);

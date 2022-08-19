@@ -1,6 +1,6 @@
 @layer components {
   .card {
-    @apply py-16 px-6 bg-gray-700 rounded text-center;
+    @apply px-6 py-16 text-center bg-gray-700 rounded;
   }
 
   .card-secondary {
@@ -13,6 +13,6 @@
   }
 
   .card-copy {
-    @apply font-secondary leading-loose;
+    @apply leading-loose font-secondary;
   }
 }

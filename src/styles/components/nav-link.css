@@ -1,13 +1,13 @@
 @layer components {
   .nav-link {
-    @apply relative text-2xl text-gray-400 font-bold font-primary;
+    @apply relative text-2xl font-bold text-gray-400 font-primary;
     @apply transition;
     @apply hover:text-gray-200;
     @apply active:text-gray-200;
   }
 
   .nav-link::after {
-    @apply absolute block w-2 h-2 bg-transparent rounded-full transition;
+    @apply absolute block w-2 h-2 transition bg-transparent rounded-full;
     content: '';
     bottom: -12px;
     left: calc(50% - 4px);

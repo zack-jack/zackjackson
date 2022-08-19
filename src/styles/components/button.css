@@ -1,6 +1,6 @@
 @layer components {
   .button {
-    @apply font-primary font-bold text-white bg-primary-dark rounded-md py-4 px-6 whitespace-nowrap;
+    @apply px-6 py-4 font-bold text-white rounded-md font-primary bg-primary-dark whitespace-nowrap;
     @apply transition;
     @apply hover:bg-primary;
     min-width: 144px;
