@@ -1,9 +1,17 @@
 ---
+import cn from "classnames";
+
 import IconGithub from "./icons/IconGithub.astro";
 import IconLinkedIn from "./icons/IconLinkedIn.astro";
+
+interface Props {
+  customClass?: string;
+}
+
+const { customClass } = Astro.props as Props;
 ---
 
-<div class="flex items-center gap-6">
+<div class={cn("flex items-center gap-6", { [customClass]: !!customClass })}>
   <a
     aria-label="Github"
     href="https://github.com/zack-jack/"
