@@ -1,0 +1,38 @@
+---
+import ContactForm from "./ContactForm.astro";
+import Container from "./Container.astro";
+import IconArrowRight from "./icons/IconArrowRight.astro";
+---
+
+<section id="contact" class="scroll-m-20">
+  <div class="flex flex-col justify-center py-48 bg-gray-800">
+    <Container>
+      <div class="flex items-center gap-24">
+        <div class="flex-1">
+          <h3 class="font-bold leading-none text-7xl">
+            <span class="flex">
+              Let's <IconArrowRight
+                customClass="w-20 h-20 ml-4 stroke-secondary"
+              />
+            </span>
+            Connect.
+          </h3>
+          <p class="mt-10 leading-loose font-secondary">
+            Contact form submissions are routed to my email. Please allow some
+            time for response. Feel free to connect on LinkedIn via the link
+            below.
+          </p>
+          <p
+            aria-hidden="true"
+            class="mt-4 text-gray-400 font-cursive text-9xl -rotate-6 opacity-10"
+          >
+            Inquiries
+          </p>
+        </div>
+        <div class="flex-1">
+          <ContactForm />
+        </div>
+      </div>
+    </Container>
+  </div>
+</section>
