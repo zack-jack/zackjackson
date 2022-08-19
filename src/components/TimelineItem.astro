@@ -8,7 +8,11 @@ const { date, label } = Astro.props as Props;
 ---
 
 <div class="flex items-start justify-between font-primary">
-  <p class="flex-1 mr-10 text-lg leading-none text-right uppercase">{date}</p>
+  <p
+    class="flex-1 mr-10 text-lg leading-none tracking-widest text-right uppercase"
+  >
+    {date}
+  </p>
   <span
     aria-hidden="true"
     class="block w-5 h-5 border-2 border-gray-300 border-solid rounded-full bg-primary"

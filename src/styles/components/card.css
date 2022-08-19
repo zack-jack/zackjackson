@@ -4,7 +4,7 @@
   }
 
   .card-secondary {
-    @apply bg-secondary;
+    @apply text-gray-100 bg-secondary-dark;
   }
 
   .card-title {
