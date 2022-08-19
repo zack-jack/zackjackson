@@ -36,6 +36,7 @@ module.exports = {
     fontFamily: {
       primary: ["Poppins", "Helvetica", "Arial", "sans-serif"],
       secondary: ["Open Sans", "Helvetica", "Arial", "sans-serif"],
+      cursive: ["Yellowtail", "Helvetica", "Arial", "sans-serif"],
     },
     extend: {},
   },
