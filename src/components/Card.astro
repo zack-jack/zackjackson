@@ -1,0 +1,29 @@
+---
+import cn from "classnames";
+
+interface Props {
+  title: string;
+  variant?: "primary" | "secondary" | "default";
+}
+
+const { title, variant = "default" } = Astro.props as Props;
+---
+
+<div
+  class={cn("card", {
+    "card-primary": variant === "primary",
+    "card-secondary": variant === "secondary",
+  })}
+>
+  <div>
+    <div class="flex justify-center">
+      <slot name="icon" />
+    </div>
+    <p class="card-title mt-12">
+      <Fragment set:html={title} />
+    </p>
+    <p class="card-copy mt-8">
+      <slot />
+    </p>
+  </div>
+</div>

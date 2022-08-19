@@ -1,0 +1,12 @@
+@layer base {
+
+  h1,
+  h2,
+  h3 {
+    @apply font-primary;
+  }
+
+  p {
+    @apply font-secondary;
+  }
+}

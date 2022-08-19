@@ -34,8 +34,6 @@ module.exports = {
       },
     },
     fontFamily: {
-      body: ["Open Sans", "Helvetica", "Arial", "sans-serif"],
-      display: ["Open Sans", "Helvetica", "Arial", "sans-serif"],
       primary: ["Poppins", "Helvetica", "Arial", "sans-serif"],
       secondary: ["Open Sans", "Helvetica", "Arial", "sans-serif"],
     },
