@@ -16,4 +16,12 @@
   .nav-link:hover::after {
     background-color: theme(colors.primary);
   }
+
+  .nav-link.active {
+    @apply text-gray-200;
+  }
+
+  .nav-link.active::after {
+    background-color: theme(colors.primary);
+  }
 }
