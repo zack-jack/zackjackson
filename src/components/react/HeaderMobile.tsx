@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import cn from "classnames";
 
-const HeaderMobile = (): React.ReactElement => {
-  const [urlHash, setUrlHash] = React.useState<string>("");
-  const [isExpanded, setIsExpanded] = React.useState<boolean>(false);
+export default function HeaderMobile(): React.ReactElement {
+  const [urlHash, setUrlHash] = useState<string>("");
+  const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
   return (
     <div className="sticky top-0 z-30 bg-gray-900 md:hidden">
@@ -85,6 +85,4 @@ const HeaderMobile = (): React.ReactElement => {
       </nav>
     </div>
   );
-};
-
-export default HeaderMobile;
+}

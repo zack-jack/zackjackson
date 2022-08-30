@@ -6,15 +6,13 @@ interface ContainerProps {
   children: React.ReactNode;
 }
 
-const Container = ({
+export default function Container({
   className,
   children,
-}: ContainerProps): React.ReactElement => {
+}: ContainerProps): React.ReactElement {
   const containerClasses = cn("container mx-auto max-w-7xl", {
     [className as string]: !!className,
   });
 
   return <div className={containerClasses}>{children}</div>;
-};
-
-export default Container;
+}

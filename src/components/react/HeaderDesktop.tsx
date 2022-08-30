@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import cn from "classnames";
 
 import Container from "./Container";
 
-const HeaderDesktop = (): React.ReactElement => {
-  const [urlHash, setUrlHash] = React.useState<string>("");
+export default function HeaderDesktop(): React.ReactElement {
+  const [urlHash, setUrlHash] = useState<string>("");
 
   return (
     <div className="sticky top-0 z-30 hidden bg-gray-900 py-12 md:block">
@@ -67,6 +67,4 @@ const HeaderDesktop = (): React.ReactElement => {
       </Container>
     </div>
   );
-};
-
-export default HeaderDesktop;
+}
