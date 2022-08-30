@@ -2,4 +2,8 @@
   .link {
     @apply font-bold text-gray-400 font-primary;
   }
+
+  .link-primary {
+    @apply text-primary;
+  }
 }
