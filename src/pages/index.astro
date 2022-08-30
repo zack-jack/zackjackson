@@ -1,8 +1,14 @@
 ---
-import LandingAbout from "../components/LandingAbout.astro";
-import LandingContact from "../components/LandingContact.astro";
-import LandingExperience from "../components/LandingExperience.astro";
-import LandingHero from "../components/LandingHero.astro";
+import Card from "../components/Card.astro";
+import ContactForm from "../components/ContactForm.astro";
+import IconArrowDown from "../components/icons/IconArrowDown.astro";
+import IconArrowRight from "../components/icons/IconArrowRight.astro";
+import IconCode from "../components/icons/IconCode.astro";
+import IconGamepad from "../components/icons/IconGamepad.astro";
+import IconMusic from "../components/icons/IconMusic.astro";
+import SectionKicker from "../components/SectionKicker.astro";
+import SocialIconLinks from "../components/SocialIconLinks.astro";
+import Timeline from "../components/Timeline.astro";
 import NavLayout from "../layouts/NavLayout.astro";
 
 if (import.meta.env.PROD) {
@@ -11,12 +17,144 @@ if (import.meta.env.PROD) {
 ---
 
 <NavLayout>
+	<!-- Hero -->
 	<div class="constrained">
-		<LandingHero />
+		<section id="introduction" class="landing-hero">
+			<div class="flex flex-col gap-12 md:flex-row md:gap-24 xl:gap-48">
+				<header class="flex-1">
+					<h1 class="text-5xl font-bold leading-tight tracking-wide lg:text-7xl">
+						Zack
+						<br /> Jackson.
+					</h1>
+					<span
+						aria-hidden="true"
+						class="block w-10 h-2 mt-2 bg-primary"
+					></span>
+					<div class="hidden md:mt-6 md:block">
+						<SocialIconLinks iconClass="md:h-10 md:w-10 lg:h-12 lg:w-12" />
+					</div>
+				</header>
+				<div class="flex-1">
+					<SectionKicker>Introduction</SectionKicker>
+					<h2 class="mt-4 text-xl font-bold leading-normal lg:text-2xl">
+						Software Developer
+						<br /> based in Charlotte, NC
+					</h2>
+					<p class="mt-4 text-gray-400">
+						Hi! I'm Zack. I specialize in front-end development with experience building React and Vue web applications.
+						</p>
+				</div>
+			</div>
+			<div class="mt-6 md:hidden">
+				<SocialIconLinks iconClass="w-9 h-9" />
+			</div>
+			<div class="absolute left-0 right-0 bottom-6 flex justify-center md:bottom-10">
+				<a href="#about" class="flex flex-col items-center link">
+					<span class="leading-none">Scroll for more</span>
+					<span aria-hidden="true" class="mt-2">
+						<IconArrowDown />
+					</span>
+				</a>
+			</div>
+		</section>
 	</div>
-	<LandingAbout />
+
+	<!-- About -->
+	<section id="about" class="relative scroll-m-8 md:scroll-m-32 lg:scroll-m-40">
+		<div class="flex flex-col justify-center py-24 bg-gray-800 md:pt-48 md:pb-96">
+			<div class="constrained">
+				<div class="flex flex-col px-16 gap-12 md:flex-row md:items-center md:gap-24 xl:gap-48">
+					<div class="flex-1">
+						<SectionKicker>About Me</SectionKicker>
+						<h2 class="mt-4 text-xl font-bold leading-normal lg:text-2xl">
+							I enjoy solving problems and bringing design to life.
+						</h2>
+						<p class="mt-4 text-gray-400">
+							The most exciting part about what I do is seeing everything come together to make peoples' lives better in some way.
+						</p>
+					</div>
+					<div class="flex-1">
+						<img
+							src="https://via.placeholder.com/800x600.png"
+							alt="A placeholder image"
+						/>
+					</div>
+				</div>
+			</div>
+			<div
+				class="mt-48 lg:absolute lg:bottom-0 lg:left-0 lg:right-0 lg:flex lg:flex-col lg:items-center lg:mt-0 lg:transform lg:translate-y-1/2"
+			>
+				<div class="constrained flex flex-col items-center gap-16 lg:flex-row">
+					<Card title="Gamer">
+						<IconGamepad customClass="stroke-secondary" slot="icon" />
+						I’m a longtime fan of Halo multiplayer. I also enjoy PlayStation story-driven
+						games and the Pokemon franchise.
+					</Card>
+					<Card title="Front-end<br /> Developer" variant="secondary">
+						<IconCode customClass="stroke-gray-200" slot="icon" />
+						I have a passion for transforming design into accessible and delightful
+						user experiences with code.
+					</Card>
+					<Card title="Musician">
+						<IconMusic customClass="stroke-secondary" slot="icon" />
+						I’ve been playing guitar since I was about 12 years old. I can talk about
+						guitar effects pedals and tone endlessly.
+					</Card>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Work Experience -->
 	<div class="constrained">
-		<LandingExperience />
+		<section id="work" class="py-24 lg:pb-48 lg:pt-96">
+			<h2
+				id="experience"
+				class="text-6xl text-center text-gray-400 font-cursive -rotate-3 scroll-m-16 md:scroll-m-32 lg:text-8xl lg:scroll-m-40"
+			>
+				Experience
+			</h2>
+			<Timeline customClass="mt-24 lg:mt-40" />
+		</section>
 	</div>
-	<LandingContact />
+
+	<!-- Contact -->
+	<section id="contact" class="scroll-m-8 lg:scroll-m-20">
+		<div class="flex flex-col justify-center py-24 md:py-48 bg-gray-800">
+			<div class="constrained">
+				<div class="flex flex-col gap-16 md:gap-24 lg:flex-row lg:items-center">
+					<div class="flex-1">
+						<h3 class="font-bold leading-none text-7xl">
+							<span class="flex">
+								Let's <IconArrowRight customClass="w-20 h-20 ml-4 stroke-primary"
+								/>
+							</span>
+							Connect.
+						</h3>
+						<p class="mt-10 leading-loose font-secondary">
+							Contact form submissions are routed to my email. Please allow some
+							time for response. Feel free to also connect with me on
+							<a
+								href="https://www.linkedin.com/in/zack-jackson/"
+								target="_blank"
+								rel="noreferrer noopener"
+								class="link link-primary"
+							>
+								LinkedIn
+							</a>.
+						</p>
+						<span
+							aria-hidden="true"
+							class="hidden mt-4 text-gray-400 font-cursive text-9xl -rotate-6 opacity-20 lg:block"
+						>
+							Inquiries
+						</span>
+					</div>
+					<div class="flex-1">
+						<ContactForm client:visible />
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </NavLayout>
