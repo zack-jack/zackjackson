@@ -1,6 +1,8 @@
 @layer components {
   .card {
-    @apply px-6 py-16 text-center bg-gray-700 rounded;
+    @apply max-w-xs px-6 py-16 text-center bg-gray-700 rounded;
+    @apply md:max-w-md;
+    @apply lg:max-w-none;
   }
 
   .card-secondary {

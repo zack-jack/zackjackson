@@ -6,13 +6,13 @@ import IconMusic from "./icons/IconMusic.astro";
 import SectionKicker from "./SectionKicker.astro";
 ---
 
-<section id="about" class="relative scroll-m-40">
-  <div class="flex flex-col justify-center pt-48 bg-gray-800 pb-96">
+<section id="about" class="relative scroll-m-8 md:scroll-m-40">
+  <div class="flex flex-col justify-center py-24 bg-gray-800 md:pt-48 md:pb-96">
     <div class="constrained">
-      <div class="flex items-center gap-48 px-16">
+      <div class="flex flex-col px-16 gap-12 md:flex-row md:items-center md:gap-24 xl:gap-48">
         <div class="flex-1">
           <SectionKicker>About Me</SectionKicker>
-          <h2 class="mt-4 text-2xl font-bold leading-normal">
+          <h2 class="mt-4 text-xl font-bold leading-normal lg:text-2xl">
             I enjoy solving problems and bringing design to life.
           </h2>
           <p class="mt-4 text-gray-400">
@@ -29,9 +29,9 @@ import SectionKicker from "./SectionKicker.astro";
       </div>
     </div>
     <div
-      class="absolute bottom-0 left-0 right-0 flex flex-col items-center transform translate-y-1/2"
+      class="mt-48 lg:absolute lg:bottom-0 lg:left-0 lg:right-0 lg:flex lg:flex-col lg:items-center lg:mt-0 lg:transform lg:translate-y-1/2"
     >
-      <div class="constrained flex gap-16">
+      <div class="constrained flex flex-col items-center gap-16 lg:flex-row">
         <Card title="Gamer">
           <IconGamepad customClass="stroke-secondary" slot="icon" />
           I’m a longtime fan of Halo multiplayer. I also enjoy PlayStation story-driven
