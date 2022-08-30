@@ -1,6 +1,5 @@
 ---
 import Card from "./Card.astro";
-import Container from "./Container.astro";
 import IconCode from "./icons/IconCode.astro";
 import IconGamepad from "./icons/IconGamepad.astro";
 import IconMusic from "./icons/IconMusic.astro";
@@ -9,7 +8,7 @@ import SectionKicker from "./SectionKicker.astro";
 
 <section id="about" class="relative scroll-m-40">
   <div class="flex flex-col justify-center pt-48 bg-gray-800 pb-96">
-    <Container>
+    <div class="constrained">
       <div class="flex items-center gap-48 px-16">
         <div class="flex-1">
           <SectionKicker>About Me</SectionKicker>
@@ -28,11 +27,11 @@ import SectionKicker from "./SectionKicker.astro";
           />
         </div>
       </div>
-    </Container>
+    </div>
     <div
       class="absolute bottom-0 left-0 right-0 flex flex-col items-center transform translate-y-1/2"
     >
-      <Container containerClassName="flex gap-16">
+      <div class="constrained flex gap-16">
         <Card title="Gamer">
           <IconGamepad customClass="stroke-secondary" slot="icon" />
           I’m a longtime fan of Halo multiplayer. I also enjoy PlayStation story-driven
@@ -48,7 +47,7 @@ import SectionKicker from "./SectionKicker.astro";
           I’ve been playing guitar since I was about 12 years old. I can talk about
           guitar effects pedals and tone endlessly.
         </Card>
-      </Container>
+      </div>
     </div>
   </div>
 </section>

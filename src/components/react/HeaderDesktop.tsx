@@ -1,14 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import cn from "classnames";
-
-import Container from "./Container";
 
 export default function HeaderDesktop(): React.ReactElement {
   const [urlHash, setUrlHash] = useState<string>("");
 
+  useEffect(() => {
+    if (window?.location?.hash) {
+      setUrlHash(window.location.hash);
+    }
+  }, []);
+
   return (
     <div className="sticky top-0 z-30 hidden bg-gray-900 py-12 md:block">
-      <Container>
+      <div className="constrained">
         <nav
           role="navigation"
           aria-label="Main menu"
@@ -64,7 +68,7 @@ export default function HeaderDesktop(): React.ReactElement {
             </li>
           </ul>
         </nav>
-      </Container>
+      </div>
     </div>
   );
 }

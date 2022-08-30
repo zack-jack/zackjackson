@@ -1,0 +1,5 @@
+@layer utilities {
+  .constrained {
+    @apply container mx-auto max-w-7xl;
+  }
+}

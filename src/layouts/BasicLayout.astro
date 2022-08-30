@@ -1,6 +1,4 @@
 ---
-import Container from "../components/astro/Container.astro";
-
 import "../styles/global.css";
 
 const siteTitle = "Zack Jackson | Software Developer";
@@ -29,11 +27,11 @@ const siteTitle = "Zack Jackson | Software Developer";
   <body>
     <div id="app" class="relative flex flex-col flex-grow">
       <a href="#main" class="skip-link">Skip to content</a>
-      <Container containerClassName="flex flex-col flex-grow">
+      <div class="constrained flex flex-col flex-grow">
         <main id="main" class="flex flex-col items-center justify-center">
           <slot />
         </main>
-      </Container>
+      </div>
     </div>
   </body>
 </html>

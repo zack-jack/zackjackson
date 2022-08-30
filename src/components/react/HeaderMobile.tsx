@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import cn from "classnames";
 
 export default function HeaderMobile(): React.ReactElement {
   const [urlHash, setUrlHash] = useState<string>("");
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (window?.location?.hash) {
+      setUrlHash(window.location.hash);
+    }
+  }, []);
 
   return (
     <div className="sticky top-0 z-30 bg-gray-900 md:hidden">

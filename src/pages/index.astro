@@ -1,5 +1,4 @@
 ---
-import Container from "../components/astro/Container.astro";
 import LandingAbout from "../components/astro/LandingAbout.astro";
 import LandingContact from "../components/astro/LandingContact.astro";
 import LandingExperience from "../components/astro/LandingExperience.astro";
@@ -12,12 +11,12 @@ if (import.meta.env.PROD) {
 ---
 
 <NavLayout>
-	<Container>
+	<div class="constrained">
 		<LandingHero />
-	</Container>
+	</div>
 	<LandingAbout />
-	<Container>
+	<div class="constrained">
 		<LandingExperience />
-	</Container>
+	</div>
 	<LandingContact />
 </NavLayout>
