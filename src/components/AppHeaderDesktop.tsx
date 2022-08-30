@@ -62,7 +62,7 @@ export default function AppHeaderDesktop(): ReactElement {
               </a>
             </li>
             <li className="ml-6 lg:ml-12">
-              <a href="#" className="nav-link">
+              <a href="/resume" className="nav-link">
                 Resume
               </a>
             </li>

@@ -87,7 +87,7 @@ export default function AppHeaderMobile(): ReactElement {
               </a>
             </li>
             <li role="none">
-              <a href="#" role="menuitem" className="nav-link">
+              <a href="/resume" role="menuitem" className="nav-link">
                 Resume
               </a>
             </li>
