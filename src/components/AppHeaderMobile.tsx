@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import cn from "classnames";
 
-export default function HeaderMobile(): React.ReactElement {
+export default function AppHeaderMobile(): React.ReactElement {
   const [urlHash, setUrlHash] = useState<string>("");
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
 

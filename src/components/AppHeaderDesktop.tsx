@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import cn from "classnames";
 
-export default function HeaderDesktop(): React.ReactElement {
+export default function AppHeaderDesktop(): React.ReactElement {
   const [urlHash, setUrlHash] = useState<string>("");
 
   useEffect(() => {

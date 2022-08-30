@@ -1,7 +1,7 @@
 ---
-import Footer from "../components/astro/Footer.astro";
-import HeaderDesktop from "../components/react/HeaderDesktop";
-import HeaderMobile from "../components/react/HeaderMobile";
+import AppFooter from "../components/AppFooter.astro";
+import AppHeaderDesktop from "../components/AppHeaderDesktop";
+import AppHeaderMobile from "../components/AppHeaderMobile";
 
 import "../styles/global.css";
 
@@ -31,12 +31,12 @@ const siteTitle = "Zack Jackson | Software Developer";
   <body>
     <div id="app" class="relative flex flex-col flex-grow">
       <a href="#main" class="skip-link">Skip to content</a>
-      <HeaderDesktop client:load />
-      <HeaderMobile client:load />
+      <AppHeaderDesktop client:load />
+      <AppHeaderMobile client:load />
       <main id="main">
         <slot />
       </main>
-      <Footer />
+      <AppFooter />
     </div>
   </body>
 </html>
