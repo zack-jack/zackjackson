@@ -29,11 +29,11 @@ const siteTitle = "Zack Jackson | Software Developer";
   </head>
 
   <body>
-    <div id="app" class="relative flex flex-col flex-grow">
+    <div id="app" class="relative flex flex-col min-h-screen">
       <a href="#main" class="skip-link">Skip to content</a>
       <AppHeaderDesktop client:load />
       <AppHeaderMobile client:load />
-      <main id="main">
+      <main id="main" class="flex flex-col flex-grow">
         <slot />
       </main>
       <AppFooter />

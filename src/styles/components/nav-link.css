@@ -4,15 +4,16 @@
     @apply transition;
     @apply hover:text-gray-200 hover:bg-gradient-to-r hover:from-primary hover:to-secondary;
     @apply active:text-gray-200;
-    @apply md:inline-block md:rounded-none md:text-left;
+    @apply md:inline-block md:rounded-none md:text-xl md:text-left;
     @apply md:hover:from-transparent md:hover:to-transparent;
+    @apply lg:text-2xl;
   }
 
   .nav-link::after {
-    @apply absolute hidden w-2 h-2 transition bg-transparent rounded-full;
+    @apply absolute top-10 hidden w-2 h-2 transition bg-transparent rounded-full;
     @apply md:block;
+    @apply lg:top-12;
     content: "";
-    bottom: -12px;
     left: calc(50% - 4px);
   }
 

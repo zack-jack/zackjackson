@@ -1,5 +1,5 @@
 @layer base {
   body {
-    @apply flex flex-col h-full min-h-screen antialiased text-gray-200 bg-gray-900 font-primary;
+    @apply antialiased text-gray-200 bg-gray-900 font-primary;
   }
 }

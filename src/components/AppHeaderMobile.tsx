@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { ReactElement, useEffect, useState } from "react";
 import cn from "classnames";
 
-export default function AppHeaderMobile(): React.ReactElement {
+export default function AppHeaderMobile(): ReactElement {
   const [urlHash, setUrlHash] = useState<string>("");
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
@@ -10,6 +10,11 @@ export default function AppHeaderMobile(): React.ReactElement {
       setUrlHash(window.location.hash);
     }
   }, []);
+
+  const handleLinkClick = (urlHash: string): void => {
+    setUrlHash(urlHash);
+    setIsExpanded(false);
+  };
 
   return (
     <div className="sticky top-0 z-30 bg-gray-900 md:hidden">
@@ -52,7 +57,7 @@ export default function AppHeaderMobile(): React.ReactElement {
                 className={cn("nav-link", {
                   active: urlHash === "#about",
                 })}
-                onClick={() => setUrlHash("#about")}
+                onClick={() => handleLinkClick("#about")}
               >
                 About
               </a>
@@ -64,7 +69,7 @@ export default function AppHeaderMobile(): React.ReactElement {
                 className={cn("nav-link", {
                   active: urlHash === "#experience",
                 })}
-                onClick={() => setUrlHash("#experience")}
+                onClick={() => handleLinkClick("#experience")}
               >
                 Work
               </a>
@@ -76,7 +81,7 @@ export default function AppHeaderMobile(): React.ReactElement {
                 className={cn("nav-link", {
                   active: urlHash === "#contact",
                 })}
-                onClick={() => setUrlHash("#contact")}
+                onClick={() => handleLinkClick("#contact")}
               >
                 Contact
               </a>

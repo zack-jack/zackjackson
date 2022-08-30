@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { ReactElement, useEffect, useState } from "react";
 import cn from "classnames";
 
-export default function AppHeaderDesktop(): React.ReactElement {
+export default function AppHeaderDesktop(): ReactElement {
   const [urlHash, setUrlHash] = useState<string>("");
 
   useEffect(() => {
@@ -18,12 +18,12 @@ export default function AppHeaderDesktop(): React.ReactElement {
           aria-label="Main menu"
           className="flex items-center justify-between"
         >
-          <div>
-            <a href="/">
+          <div className="h-12 w-12 lg:h-16 lg:w-16">
+            <a href="/" onClick={() => setUrlHash("")}>
               <img
                 src="images/_logo-zack-jackson.svg"
                 alt="Zack Jackson logo - a square with a 'Z' in it"
-                className="h-16 w-16"
+                className="h-full w-full"
               />
             </a>
           </div>
@@ -39,7 +39,7 @@ export default function AppHeaderDesktop(): React.ReactElement {
                 About
               </a>
             </li>
-            <li className="ml-12">
+            <li className="ml-6 lg:ml-12">
               <a
                 href="#experience"
                 className={cn("nav-link", {
@@ -50,7 +50,7 @@ export default function AppHeaderDesktop(): React.ReactElement {
                 Work
               </a>
             </li>
-            <li className="ml-12">
+            <li className="ml-6 lg:ml-12">
               <a
                 href="#contact"
                 className={cn("nav-link", {
@@ -61,7 +61,7 @@ export default function AppHeaderDesktop(): React.ReactElement {
                 Contact
               </a>
             </li>
-            <li className="ml-12">
+            <li className="ml-6 lg:ml-12">
               <a href="#" className="nav-link">
                 Resume
               </a>

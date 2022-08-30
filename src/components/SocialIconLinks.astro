@@ -5,20 +5,26 @@ import IconGithub from "./icons/IconGithub.astro";
 import IconLinkedIn from "./icons/IconLinkedIn.astro";
 
 interface Props {
-  customClass?: string;
+  containerClass?: string;
+  iconClass?: string;
 }
 
-const { customClass } = Astro.props as Props;
+const { containerClass, iconClass } = Astro.props as Props;
 ---
 
-<div class={cn("flex items-center gap-6", { [customClass]: !!customClass })}>
+<div class={cn("flex items-center gap-6", { [containerClass as string]: !!containerClass })}>
   <a
     aria-label="Github"
     href="https://github.com/zack-jack/"
     target="_blank"
     rel="noreferrer noopener"
   >
-    <IconGithub customClass="fill-secondary hover:fill-secondary-light" />
+    <IconGithub
+      customClass={cn(
+        "fill-secondary hover:fill-secondary-light",
+        { [iconClass as string]: !!iconClass }
+      )}
+    />
   </a>
   <a
     aria-label="LinkedIn"
@@ -26,6 +32,11 @@ const { customClass } = Astro.props as Props;
     target="_blank"
     rel="noreferrer noopener"
   >
-    <IconLinkedIn customClass="fill-secondary hover:fill-secondary-light" />
+    <IconLinkedIn
+      customClass={cn(
+        "fill-secondary hover:fill-secondary-light",
+        { [iconClass as string]: !!iconClass }
+      )}
+    />
   </a>
 </div>
