@@ -1,5 +1,5 @@
 @layer components {
-  .button {
+  .btn {
     @apply px-6 py-4 font-bold text-white rounded-md font-primary bg-secondary-dark whitespace-nowrap;
     @apply transition;
     @apply hover:bg-secondary;

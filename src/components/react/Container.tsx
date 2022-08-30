@@ -2,16 +2,16 @@ import React from "react";
 import cn from "classnames";
 
 interface ContainerProps {
-  containerClassName?: string;
+  className?: string;
   children: React.ReactNode;
 }
 
 const Container = ({
-  containerClassName,
+  className,
   children,
 }: ContainerProps): React.ReactElement => {
   const containerClasses = cn("container mx-auto max-w-7xl", {
-    [containerClassName as string]: !!containerClassName,
+    [className as string]: !!className,
   });
 
   return <div className={containerClasses}>{children}</div>;

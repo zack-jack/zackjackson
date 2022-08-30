@@ -1,14 +1,17 @@
 @layer components {
   .nav-link {
-    @apply relative text-2xl font-bold text-gray-400 font-primary;
+    @apply relative block px-4 py-2 rounded-sm text-2xl font-bold text-gray-400 font-primary text-right;
     @apply transition;
-    @apply hover:text-gray-200;
+    @apply hover:text-gray-200 hover:bg-gradient-to-r hover:from-primary hover:to-secondary;
     @apply active:text-gray-200;
+    @apply md:inline-block md:rounded-none md:text-left;
+    @apply md:hover:from-transparent md:hover:to-transparent;
   }
 
   .nav-link::after {
-    @apply absolute block w-2 h-2 transition bg-transparent rounded-full;
-    content: '';
+    @apply absolute hidden w-2 h-2 transition bg-transparent rounded-full;
+    @apply md:block;
+    content: "";
     bottom: -12px;
     left: calc(50% - 4px);
   }
@@ -18,7 +21,8 @@
   }
 
   .nav-link.active {
-    @apply text-gray-200;
+    @apply text-gray-200 bg-gradient-to-r from-primary to-secondary;
+    @apply md:from-transparent md:to-transparent;
   }
 
   .nav-link.active::after {

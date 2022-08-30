@@ -1,0 +1,40 @@
+@layer components {
+  .hamburger {
+    @apply relative block w-8 h-8 cursor-pointer z-30;
+  }
+
+  .hamburger-bars {
+    @apply absolute flex flex-col justify-between w-8 -translate-y-1/2;
+    height: 25px;
+  }
+
+  .hamburger-bar {
+    @apply w-full h-1 bg-gray-200 rounded-sm;
+  }
+
+  .hamburger-bar:nth-of-type(1) {
+    @apply transition duration-300;
+    transform-origin: 0% 0%;
+  }
+
+  .hamburger-bar:nth-of-type(2) {
+    @apply transition duration-150;
+  }
+
+  .hamburger-bar:nth-of-type(3) {
+    @apply transition duration-300;
+    transform-origin: 0% 100%;
+  }
+
+  .hamburger.open .hamburger-bar:nth-of-type(1) {
+    transform: translateX(6px) rotate(45deg);
+  }
+
+  .hamburger.open .hamburger-bar:nth-of-type(2) {
+    @apply scale-y-0;
+  }
+
+  .hamburger.open .hamburger-bar:nth-of-type(3) {
+    transform: translateX(6px) rotate(-45deg);
+  }
+}
