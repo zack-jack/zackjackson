@@ -12,12 +12,12 @@ const { customClass } = Astro.props as Props;
 
 <div
   class={cn("relative flex flex-col items-center", {
-    [customClass]: !!customClass,
+    [customClass as string]: !!customClass,
   })}
 >
   <div
     aria-hidden="true"
-    class="absolute bottom-0 block w-1 h-full bg-gray-500 top-1"
+    class="absolute bottom-0 block w-1 h-full bg-gray-500 top-1 mt-1"
   >
   </div>
   <div class="z-10 flex flex-col w-full gap-40">

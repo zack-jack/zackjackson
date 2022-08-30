@@ -21,7 +21,7 @@ export default function AppHeaderMobile(): ReactElement {
       <nav
         role="navigation"
         aria-labelledby="header-mobile-hamburger-btn"
-        className="relative flex w-screen items-center justify-end p-4"
+        className="relative flex w-screen items-center justify-end py-4 px-6"
       >
         <button
           id="header-mobile-hamburger-btn"
