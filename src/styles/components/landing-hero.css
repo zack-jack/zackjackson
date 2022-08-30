@@ -6,11 +6,11 @@
     min-height: calc(100vh - 64px);
 
     @media (min-width: theme(screens.md)) {
-      min-height: calc(100vh - 144px);
+      min-height: calc(100vh - 112px);
     }
 
     @media (min-width: theme(screens.lg)) {
-      min-height: calc(100vh - 160px);
+      min-height: calc(100vh - 128px);
     }
   }
 }

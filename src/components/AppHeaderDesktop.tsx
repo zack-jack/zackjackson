@@ -11,7 +11,7 @@ export default function AppHeaderDesktop(): ReactElement {
   }, []);
 
   return (
-    <div className="sticky top-0 z-30 hidden bg-gray-900 py-12 md:block">
+    <div className="sticky top-0 z-30 hidden bg-gray-900 py-8 md:block">
       <div className="constrained">
         <nav
           role="navigation"
