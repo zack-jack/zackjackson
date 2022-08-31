@@ -1,0 +1,5 @@
+@layer components {
+  .error {
+    @apply text-error ml-1 mt-2;
+  }
+}

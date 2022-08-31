@@ -13,6 +13,7 @@ module.exports = {
       secondary: "#676BDC",
       "secondary-light": "#787AED",
       "secondary-dark": "#555DCB",
+      error: "#EF4444",
       gray: {
         100: "#F5F5F5",
         200: "#E5E7EB",

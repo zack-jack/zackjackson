@@ -5,4 +5,9 @@
     @apply hover:bg-secondary;
     min-width: 144px;
   }
+
+  .btn:disabled {
+    @apply bg-gray-500 text-gray-800 cursor-not-allowed;
+    @apply hover:bg-gray-500;
+  }
 }
