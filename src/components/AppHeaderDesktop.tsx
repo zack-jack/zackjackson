@@ -5,8 +5,12 @@ export default function AppHeaderDesktop(): ReactElement {
   const [urlHash, setUrlHash] = useState<string>("");
 
   useEffect(() => {
-    if (window?.location?.hash) {
+    if (typeof window !== "undefined") {
       setUrlHash(window.location.hash);
+      const el: HTMLElement | null = document.querySelector(
+        window.location.hash
+      );
+      if (el) el.scrollIntoView();
     }
   }, []);
 
@@ -19,13 +23,24 @@ export default function AppHeaderDesktop(): ReactElement {
           className="flex items-center justify-between"
         >
           <div className="h-12 w-12 lg:h-16 lg:w-16">
-            <a href="/" onClick={() => setUrlHash("")}>
+            <button
+              type="button"
+              onClick={() => {
+                setUrlHash("");
+                window.history.pushState(
+                  null,
+                  document.title,
+                  `${window.location.pathname}${window.location.search}`
+                );
+                window.scrollTo(0, 0);
+              }}
+            >
               <img
                 src="images/_logo-zack-jackson.svg"
                 alt="Zack Jackson logo - a square with a 'Z' in it"
                 className="h-full w-full"
               />
-            </a>
+            </button>
           </div>
           <ul className="flex items-center">
             <li>
