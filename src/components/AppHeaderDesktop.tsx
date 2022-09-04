@@ -5,7 +5,7 @@ export default function AppHeaderDesktop(): ReactElement {
   const [urlHash, setUrlHash] = useState<string>("");
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
+    if (typeof window !== "undefined" && typeof document !== "undefined") {
       setUrlHash(window.location.hash);
       const el: HTMLElement | null = document.querySelector(
         window.location.hash
