@@ -6,12 +6,8 @@ export default function AppHeaderMobile(): ReactElement {
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
   useEffect(() => {
-    if (typeof window !== "undefined" && typeof document !== "undefined") {
+    if (typeof window !== "undefined") {
       setUrlHash(window.location.hash);
-      const el: HTMLElement | null = document.querySelector(
-        window.location.hash
-      );
-      if (el) el.scrollIntoView();
     }
   }, []);
 
